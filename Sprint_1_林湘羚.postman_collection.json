@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "00e175b1-ce74-4d88-ab1c-5e4645471ac4",
+		"name": "Sprint_1_林湘羚",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12047500"
+	},
+	"item": [
+		{
+			"name": "Get All MGNs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mgn/:mgniId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mgn",
+						":mgniId"
+					],
+					"variable": [
+						{
+							"key": "mgniId",
+							"value": "MGI20220928021545660"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Specification",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create MgnAndCash",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mgniType\" : \"1\",\r\n    \"mgniCmNo\" : \"02\",\r\n    \"mgniKacTyp\" : \"\",\r\n    \"mgniBankNo\" : \"001\",\r\n    \"mgniCcy\" : \"TWD\",   \r\n    \"mgniPvType\" : \"1\",\r\n    \"mgniBicaccN0\" : \"05459711239\",\r\n    \"mgniIType\" : \"1\",\r\n    \"mgniPReasonp\" : \"no reqsonp\",\r\n    \"mgniAmt\" : \"5000\",\r\n    \"mgniCtName\" : \"林毛毛\",\r\n    \"mgniCtTel\" : \"0933257676\",\r\n    \"mgniStatus\" : \"6\",\r\n    \"cashiList\" : [\r\n        {\r\n            \"cashiAccNo\" : \"900001A\",\r\n            \"cashiCcy\" : \"TWD\",\r\n            \"cashiAmt\" : \"2000\"\r\n        },\r\n        {\r\n           \"cashiAccNo\" : \"900001B\",\r\n            \"cashiCcy\" : \"TWD\",\r\n            \"cashiAmt\" : \"100\"\r\n        }\r\n    ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mgn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mgn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Mgn",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Bill\",\r\n    \"age\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
